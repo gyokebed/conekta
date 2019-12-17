@@ -3,6 +3,8 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import { records } from "./services/fakeRecordsService";
 
+import Payments from "./components/records/records.component.jsx";
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -13,9 +15,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        {this.state.payments.map(payment => {
-          return <h1>{payment.status}</h1>;
-        })}
+        <Payments payments={this.state.payments} />
       </div>
     );
   }
