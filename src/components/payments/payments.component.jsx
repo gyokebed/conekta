@@ -18,7 +18,7 @@ class Payments extends Component {
   render() {
     const { payments } = this.state;
 
-    return <PaymentsTable data={payments} />;
+    return <PaymentsTable data={payments} name="Payments" />;
   }
 }
 

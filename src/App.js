@@ -8,37 +8,39 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="wrapper">
-          {/* sidebar */}
-          <nav id="sidebar">
-            <div className="sidebar-header">
-              <h3>
-                <Link to="/">Conekta</Link>
-              </h3>
-            </div>
+        <div className="container-fluid">
+          <div className="row">
+            {/* sidebar */}
+            <nav className="col-md-2 d-none d-md-block bg-light sidebar">
+              <div className="sidebar-header">
+                <h3>
+                  <Link to="/">Conekta</Link>
+                </h3>
+              </div>
 
-            <ul className="list-unstyled components">
-              <li className="active">
-                <a
-                  href="#homeSubmenu"
-                  data-toggle="collapse"
-                  aria-expanded="false"
-                  className="dropdown-toggle"
-                >
-                  Transactions
-                </a>
-              </li>
-              <li>
-                <a href="#">Payments</a>
-              </li>
-            </ul>
-          </nav>
-          <main className="container">
-            <Switch>
-              <Route path="/:id" component={Details} />
-              <Route path="/" component={Payments} />
-            </Switch>
-          </main>
+              <ul className="list-unstyled components">
+                <li className="active">
+                  <a
+                    href="#homeSubmenu"
+                    data-toggle="collapse"
+                    aria-expanded="false"
+                    className="dropdown-toggle"
+                  >
+                    Transactions
+                  </a>
+                </li>
+                <li>
+                  <a href="#">Payments</a>
+                </li>
+              </ul>
+            </nav>
+            <main className="col-md-9 ml-sm-auto col-lg-10 px-4">
+              <Switch>
+                <Route path="/:id" component={Details} />
+                <Route path="/" component={Payments} />
+              </Switch>
+            </main>
+          </div>
         </div>
       </React.Fragment>
     );
