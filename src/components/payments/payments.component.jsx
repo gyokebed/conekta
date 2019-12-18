@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { records } from "../../services/fakePaymentsService";
+import PaymentsTable from "./payments-table.component.jsx";
 
 class Payments extends Component {
   constructor(props) {
@@ -16,9 +17,8 @@ class Payments extends Component {
 
   render() {
     const { payments } = this.state;
-    return payments.map(payment => {
-      return <h1>{payment.customer.name}</h1>;
-    });
+
+    return <PaymentsTable data={payments} />;
   }
 }
 
