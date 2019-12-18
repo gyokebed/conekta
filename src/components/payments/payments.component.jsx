@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { records } from "../../services/fakeRecordsService";
+import { records } from "../../services/fakePaymentsService";
 
 class Payments extends Component {
   constructor(props) {
