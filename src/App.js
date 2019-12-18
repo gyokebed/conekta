@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Link } from "react-router-dom";
 
 import Payments from "./components/payments/payments.component.jsx";
+import Details from "./components/details/details.component.jsx";
 
 class App extends Component {
   render() {
@@ -10,67 +11,31 @@ class App extends Component {
         <div className="wrapper">
           {/* sidebar */}
           <nav id="sidebar">
-            <div class="sidebar-header">
-              <h3>Bootstrap Sidebar</h3>
+            <div className="sidebar-header">
+              <h3>
+                <Link to="/">Conekta</Link>
+              </h3>
             </div>
 
-            <ul class="list-unstyled components">
-              <p>Dummy Heading</p>
-              <li class="active">
+            <ul className="list-unstyled components">
+              <li className="active">
                 <a
                   href="#homeSubmenu"
                   data-toggle="collapse"
                   aria-expanded="false"
-                  class="dropdown-toggle"
+                  className="dropdown-toggle"
                 >
-                  Home
+                  Transactions
                 </a>
-                <ul class="collapse list-unstyled" id="homeSubmenu">
-                  <li>
-                    <a href="#">Home 1</a>
-                  </li>
-                  <li>
-                    <a href="#">Home 2</a>
-                  </li>
-                  <li>
-                    <a href="#">Home 3</a>
-                  </li>
-                </ul>
               </li>
               <li>
-                <a href="#">About</a>
-              </li>
-              <li>
-                <a
-                  href="#pageSubmenu"
-                  data-toggle="collapse"
-                  aria-expanded="false"
-                  class="dropdown-toggle"
-                >
-                  Pages
-                </a>
-                <ul class="collapse list-unstyled" id="pageSubmenu">
-                  <li>
-                    <a href="#">Page 1</a>
-                  </li>
-                  <li>
-                    <a href="#">Page 2</a>
-                  </li>
-                  <li>
-                    <a href="#">Page 3</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">Portfolio</a>
-              </li>
-              <li>
-                <a href="#">Contact</a>
+                <a href="#">Payments</a>
               </li>
             </ul>
           </nav>
           <main className="container">
             <Switch>
+              <Route path="/payment" component={Details} />
               <Route path="/" component={Payments} />
             </Switch>
           </main>

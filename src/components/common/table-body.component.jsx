@@ -17,7 +17,7 @@ const TableBody = ({ data }) => {
               <br></br>
               {payment.customer.email}
             </td>
-            <td>{payment.amount}</td>
+            <td>${payment.amount}</td>
           </tr>
         );
       })}
