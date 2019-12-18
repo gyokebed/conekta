@@ -35,7 +35,7 @@ class App extends Component {
           </nav>
           <main className="container">
             <Switch>
-              <Route path="/payment" component={Details} />
+              <Route path="/:id" component={Details} />
               <Route path="/" component={Payments} />
             </Switch>
           </main>

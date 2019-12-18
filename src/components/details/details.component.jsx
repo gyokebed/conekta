@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { records } from "../../services/fakePaymentsService";
-// import PaymentsTable from "./payments-table.component.jsx";
 
 class Details extends Component {
   constructor(props) {
@@ -16,9 +15,10 @@ class Details extends Component {
   }
 
   render() {
+    const { id } = this.props.match.params;
     const { payments } = this.state;
 
-    return <h1>Details Component</h1>;
+    return <h1>{id}</h1>;
   }
 }
 
