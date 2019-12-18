@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const TableBody = ({ data }) => {
   return (
@@ -6,7 +7,9 @@ const TableBody = ({ data }) => {
       {data.map(payment => {
         return (
           <tr key={payment.id}>
-            <th scope="row">1</th>
+            <th scope="row">
+              <Link to={payment.id}>Ver</Link>
+            </th>
             <td>{payment.created}</td>
             <td>{payment.status}</td>
             <td>
