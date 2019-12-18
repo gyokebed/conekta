@@ -1,4 +1,4 @@
-export const detail = {
+export const details = {
   data: {
     payment: {
       id: "ord_2m9fvZfVz97nQhMmg",

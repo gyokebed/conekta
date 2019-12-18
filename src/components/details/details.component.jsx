@@ -1,24 +1,30 @@
 import React, { Component } from "react";
-import { records } from "../../services/fakePaymentsService";
+import { details } from "../../services/fakeDetailsService";
 
 class Details extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      payments: []
+      paymentDetails: {}
     };
   }
 
   componentDidMount() {
-    const payments = records.data.payments;
-    this.setState({ payments });
+    const paymentDetails = details.data.payment;
+    this.setState({ paymentDetails });
+    console.log(paymentDetails);
   }
 
   render() {
     const { id } = this.props.match.params;
-    const { payments } = this.state;
-
-    return <h1>{id}</h1>;
+    const { paymentDetails } = this.state;
+    return (
+      <h1>
+        {id}
+        <br></br>
+        {paymentDetails.amount}
+      </h1>
+    );
   }
 }
 
