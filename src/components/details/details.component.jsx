@@ -39,14 +39,18 @@ class Details extends Component {
           <div className="btn-group mr-2">
             <button
               type="button"
-              className="btn btn-sm btn-outline-secondary"
+              className={`btn btn-sm btn-outline-secondary ${
+                this.state.dataActive ? "active" : ""
+              }`}
               onClick={this.handleDataClick}
             >
               Data
             </button>
             <button
               type="button"
-              className="btn btn-sm btn-outline-secondary"
+              className={`btn btn-sm btn-outline-secondary ${
+                this.state.breakdownTableActive ? "active" : ""
+              }`}
               onClick={this.handleBreakdownClick}
             >
               Breakdown
