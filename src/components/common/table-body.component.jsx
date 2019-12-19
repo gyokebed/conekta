@@ -2,25 +2,35 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const TableBody = ({ data }) => {
+  console.log(data);
   return (
     <tbody>
       {data.map(payment => {
+        const {
+          id,
+          created,
+          status,
+          type,
+          brand,
+          customer: { name, email },
+          amount
+        } = payment;
         return (
-          <tr key={payment.id}>
+          <tr key={id}>
             <th scope="row">
-              <Link to={payment.id}>Ver</Link>
+              <Link to={id}>Ver</Link>
             </th>
-            <td>{payment.created}</td>
-            <td>{payment.status}</td>
+            <td>{created}</td>
+            <td>{status}</td>
             <td>
-              {payment.type} {payment.brand}
+              {type} {brand}
             </td>
             <td>
-              {payment.customer.name}
+              {name}
               <br></br>
-              {payment.customer.email}
+              {email}
             </td>
-            <td>${payment.amount}</td>
+            <td>${amount}</td>
           </tr>
         );
       })}
