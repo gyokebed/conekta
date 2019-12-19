@@ -1,15 +1,12 @@
 import React from "react";
 
-const TableHeader = () => {
+const TableHeader = ({ tableheadItems }) => {
   return (
     <thead>
       <tr>
-        <th scope="col"></th>
-        <th scope="col">Date</th>
-        <th scope="col">Payment status</th>
-        <th scope="col">Payment type</th>
-        <th scope="col">Customer</th>
-        <th scope="col">Amount</th>
+        {tableheadItems.map(item => {
+          return <th scope="col">{item}</th>;
+        })}
       </tr>
     </thead>
   );
