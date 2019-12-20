@@ -7,12 +7,10 @@ import Main from "./components/main/main.jsx";
 class App extends Component {
   render() {
     return (
-      <div className="container-fluid">
-        <div className="row">
-          <Header />
-          <Sidebar />
-          <Main />
-        </div>
+      <div className="d-flex" id="wrapper">
+        {/* <Header /> */}
+        <Sidebar />
+        <Main />
       </div>
     );
   }

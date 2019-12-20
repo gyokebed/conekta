@@ -6,17 +6,19 @@ import Details from "../details/details.component.jsx";
 
 const Main = () => {
   return (
-    <main className="col-md-9 ml-sm-auto col-lg-10 px-4">
-      <Switch>
-        <Route
-          path="/:id"
-          render={props => <Details {...props} title={`Payment Details`} />}
-        />
-        <Route
-          path="/"
-          render={props => <Payments {...props} title={`Payments`} />}
-        />
-      </Switch>
+    <main id="page-content-wrapper">
+      <div className="container-fluid">
+        <Switch>
+          <Route
+            path="/:id"
+            render={props => <Details {...props} title={`Payment Details`} />}
+          />
+          <Route
+            path="/"
+            render={props => <Payments {...props} title={`Payments`} />}
+          />
+        </Switch>
+      </div>
     </main>
   );
 };
