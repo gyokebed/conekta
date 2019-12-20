@@ -1,25 +1,19 @@
 import React from "react";
+import Moment from "react-moment";
 
-const Block = ({ data }) => {
-  const blockInfo = [
-    {
-      content: payment => {
-        return `${payment.created}`;
-      }
-    }
-  ];
+const Block = ({ data, title, blockInfo }) => {
   data = [data];
-  console.log(data);
 
-  return data.map(item => {
-    return (
-      <tr>
-        {blockInfo.map(column => {
-          return <p key={column.path}>{column.content(item)}</p>;
-        })}
-      </tr>
-    );
-  });
+  return (
+    <div>
+      <h4>{title}</h4>
+      {data.map(item => {
+        return blockInfo.map(column => {
+          return <p>{column.content(item)}</p>;
+        });
+      })}
+    </div>
+  );
 };
 
 export default Block;
