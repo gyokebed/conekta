@@ -18,7 +18,12 @@ class Payments extends Component {
   render() {
     const { payments } = this.state;
 
-    return <PaymentsTable data={payments} name="Payments" />;
+    return (
+      <React.Fragment>
+        <h1>{this.props.title}</h1>
+        <PaymentsTable data={payments} />
+      </React.Fragment>
+    );
   }
 }
 

@@ -36,8 +36,16 @@ class App extends Component {
             </nav>
             <main className="col-md-9 ml-sm-auto col-lg-10 px-4">
               <Switch>
-                <Route path="/:id" component={Details} />
-                <Route path="/" component={Payments} />
+                <Route
+                  path="/:id"
+                  render={props => (
+                    <Details {...props} title={`Payment Details`} />
+                  )}
+                />
+                <Route
+                  path="/"
+                  render={props => <Payments {...props} title={`Payments`} />}
+                />
               </Switch>
             </main>
           </div>

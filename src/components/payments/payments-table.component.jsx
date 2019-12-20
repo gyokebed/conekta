@@ -2,7 +2,7 @@ import React from "react";
 import Table from "../common/table.jsx";
 import { Link } from "react-router-dom";
 
-const PaymentsTable = ({ data: payments, name }) => {
+const PaymentsTable = ({ data }) => {
   const tableHeadItems = [
     "",
     "Date",
@@ -40,14 +40,7 @@ const PaymentsTable = ({ data: payments, name }) => {
     }
   ];
   return (
-    <div>
-      <h1>{name}</h1>
-      <Table
-        data={payments}
-        tableheadItems={tableHeadItems}
-        columns={columns}
-      />
-    </div>
+    <Table data={data} tableheadItems={tableHeadItems} columns={columns} />
   );
 };
 

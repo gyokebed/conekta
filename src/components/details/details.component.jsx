@@ -35,6 +35,7 @@ class Details extends Component {
   render() {
     return (
       <div>
+        <h1>{this.props.title}</h1>
         <div className="d-flex flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
           <div className="btn-group mr-2">
             <button
