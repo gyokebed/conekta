@@ -1,6 +1,7 @@
 import React from "react";
 import Table from "../common/table.jsx";
 import { Link } from "react-router-dom";
+import Moment from "react-moment";
 
 const PaymentsTable = ({ data }) => {
   const tableHeadItems = [
@@ -15,7 +16,7 @@ const PaymentsTable = ({ data }) => {
     { content: payment => <Link to={`${payment.id}`}>Ver</Link> },
     {
       content: payment => {
-        return `${payment.created}`;
+        return <Moment unix>{`${payment.created}`}</Moment>;
       }
     },
     {

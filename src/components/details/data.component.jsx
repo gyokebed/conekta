@@ -1,4 +1,5 @@
 import React from "react";
+import Moment from "react-moment";
 
 const Data = ({ data, id }) => {
   const {
@@ -28,7 +29,9 @@ const Data = ({ data, id }) => {
       <div>
         <h4>PAYMENT STATUS</h4>
         <div>Amount: ${amount}</div>
-        <div>Created At {created}</div>
+        <div>
+          Created At: <Moment unix>{created}</Moment>
+        </div>
         <div>Paid At: {paid_at ? paid_at : "Not yet paid"}</div>
         <div>{status}</div>
         <div>{failure_message}</div>
