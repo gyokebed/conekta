@@ -1,7 +1,5 @@
 import React from "react";
 import Table from "../common/table.jsx";
-import TableHeader from "../common/table-header.component.jsx";
-import TableBody from "./table-breakdown-body.component.jsx";
 
 const BreakdownTable = ({ data }) => {
   const tableHeadItems = [
@@ -13,11 +11,31 @@ const BreakdownTable = ({ data }) => {
     "Discounts",
     "Unit Price"
   ];
+
+  const columns = [
+    { content: payment => `` },
+    {
+      content: payment => {
+        return `${payment.quantity}`;
+      }
+    },
+    {
+      content: payment => {
+        return `${payment.name}`;
+      }
+    },
+    { content: payment => `` },
+    { content: payment => `` },
+    { content: payment => `` },
+    {
+      content: payment => {
+        return `$ ${payment.unit_price}`;
+      }
+    }
+  ];
+
   return (
-    <table className="table">
-      <TableHeader tableheadItems={tableHeadItems} />
-      <TableBody data={data} />
-    </table>
+    <Table data={data} tableheadItems={tableHeadItems} columns={columns} />
   );
 };
 
