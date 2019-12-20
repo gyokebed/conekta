@@ -1,8 +1,9 @@
 import React from "react";
 import Table from "../common/table.jsx";
 import TableHeader from "../common/table-header.component.jsx";
+import TableBody from "./table-breakdown-body.component.jsx";
 
-const BreakdownTable = ({ data: payments, name }) => {
+const BreakdownTable = ({ data }) => {
   const tableHeadItems = [
     "SKU",
     "Quantity",
@@ -15,6 +16,7 @@ const BreakdownTable = ({ data: payments, name }) => {
   return (
     <table className="table">
       <TableHeader tableheadItems={tableHeadItems} />
+      <TableBody data={data} />
     </table>
   );
 };

@@ -63,7 +63,7 @@ class Details extends Component {
             id={this.props.match.params.id}
           />
         ) : (
-          <BreakdownTable />
+          <BreakdownTable data={this.state.paymentDetails.line_items} />
         )}
       </div>
     );
