@@ -1,5 +1,6 @@
 import React from "react";
 import Moment from "react-moment";
+import Block from "../common/block.component.jsx";
 
 const Data = ({ data, id }) => {
   const {
@@ -25,7 +26,8 @@ const Data = ({ data, id }) => {
     ]
   } = data;
   return (
-    <React.Fragment>
+    <div>
+      <Block data={data} />
       <div>
         <h4>PAYMENT STATUS</h4>
         <div>Amount: ${amount}</div>
@@ -55,7 +57,7 @@ const Data = ({ data, id }) => {
         </div>
         <div>Authorization Code: {auth_code}</div>
       </div>
-    </React.Fragment>
+    </div>
   );
 };
 
