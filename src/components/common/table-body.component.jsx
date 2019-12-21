@@ -3,11 +3,11 @@ import React from "react";
 const TableBody = ({ data, columns }) => {
   return (
     <tbody>
-      {data.map(item => {
+      {data.map((item, i) => {
         return (
-          <tr>
-            {columns.map(column => {
-              return <td key={column.path}>{column.content(item)}</td>;
+          <tr key={i}>
+            {columns.map((column, i) => {
+              return <td key={i}>{column.content(item)}</td>;
             })}
           </tr>
         );

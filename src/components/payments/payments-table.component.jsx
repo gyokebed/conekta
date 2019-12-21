@@ -1,7 +1,8 @@
 import React from "react";
-import Table from "../common/table.jsx";
 import { Link } from "react-router-dom";
 import Moment from "react-moment";
+import Table from "../common/table.jsx";
+import look from "../../assets/look.png";
 
 const PaymentsTable = ({ data }) => {
   const tableHeadItems = [
@@ -13,7 +14,13 @@ const PaymentsTable = ({ data }) => {
     "Amount"
   ];
   const columns = [
-    { content: payment => <Link to={`${payment.id}`}>Ver</Link> },
+    {
+      content: payment => (
+        <Link to={`${payment.id}`}>
+          <img src={look}></img>
+        </Link>
+      )
+    },
     {
       content: payment => {
         return <Moment unix>{`${payment.created}`}</Moment>;

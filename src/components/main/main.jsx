@@ -1,6 +1,5 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-
 import Payments from "../payments/payments.component.jsx";
 import Details from "../details/details.component.jsx";
 import Header from "../header/header.jsx";

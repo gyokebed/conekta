@@ -4,10 +4,12 @@ import TableHeader from "./table-header.component.jsx";
 
 const Table = ({ data, tableheadItems, columns }) => {
   return (
-    <table className="table">
-      <TableHeader tableheadItems={tableheadItems} />
-      <TableBody data={data} columns={columns} />
-    </table>
+    <div className="table-responsive">
+      <table className="table">
+        <TableHeader tableheadItems={tableheadItems} />
+        <TableBody data={data} columns={columns} />
+      </table>
+    </div>
   );
 };
 

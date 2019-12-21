@@ -4,8 +4,12 @@ const TableHeader = ({ tableheadItems }) => {
   return (
     <thead>
       <tr>
-        {tableheadItems.map(item => {
-          return <th scope="col">{item}</th>;
+        {tableheadItems.map((item, i) => {
+          return (
+            <th key={i} scope="col">
+              {item}
+            </th>
+          );
         })}
       </tr>
     </thead>

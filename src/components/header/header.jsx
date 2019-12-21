@@ -4,7 +4,7 @@ import avatar from "../../assets/avatar.png";
 
 const Header = () => {
   return (
-    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light border-bottom">
       <button
         className="navbar-toggler"
         type="button"
@@ -22,7 +22,8 @@ const Header = () => {
           <li className="nav-item active">
             <Link className="nav-link" to="/">
               <img className="avatar" src={avatar} />
-              User name <span class="sr-only">(current)</span>
+              Gustavo Carrillo
+              <span className="sr-only">(current)</span>
             </Link>
           </li>
 
